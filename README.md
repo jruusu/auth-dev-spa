@@ -3,6 +3,8 @@ Quick demo of a single page web app with
 * Auth0 login
 * Backend API call with bearer token authentication
 
+Code in this repo is mostly based on Quick Start examples by [Auth0](https://auth0.com/).
+
 ## Prerequisites
 * Node.js 8.12
 * [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
