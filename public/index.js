@@ -7,7 +7,7 @@ window.addEventListener('load', async () => {
   const config = await fetchConfig()
 
   const webAuth = new auth0.WebAuth({
-    audience: config.auth0.backendID,
+    audience: config.auth0.audience,
     domain: config.auth0.domain,
     clientID: config.auth0.clientID,
     responseType: 'token id_token',
