@@ -1,4 +1,7 @@
 # auth-dev-spa
+Quick demo of a single page web app with
+* Auth0 login
+* Backend API call with bearer token authentication
 
 ## Prerequisites
 * Node.js 8.12
@@ -14,4 +17,6 @@
 
 ## Run it in Heroku
 
+1) Create a heroku app; [heroku create](https://devcenter.heroku.com/articles/creating-apps)
 1) Set `AUTH0_DOMAIN`, `AUTH0_CLIENT_ID`, and `AUTH0_AUDIENCE` as config vars. Instructions: [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)
+1) Deploy to Heroku with Git; [git push heroku master](https://devcenter.heroku.com/articles/git)
