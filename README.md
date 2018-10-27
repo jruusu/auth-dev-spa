@@ -1,4 +1,4 @@
-# auth-dev-spa
+# auth0-spa-api-demo
 Quick demo of a single page web app with
 * Auth0 login
 * Backend API call with bearer token authentication
