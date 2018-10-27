@@ -10,6 +10,7 @@ app.get('/config', (req, res) => res.send({
     auth0: {
       domain: process.env.AUTH0_DOMAIN,
       clientID: process.env.AUTH0_CLIENT_ID,
+      backendID: process.env.AUTH0_BACKEND_API_ID,
     }
   }))
 
