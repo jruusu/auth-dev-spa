@@ -7,6 +7,7 @@ window.addEventListener('load', async () => {
   const config = await fetchConfig()
 
   const webAuth = new auth0.WebAuth({
+    audience: config.auth0.audience,
     domain: config.auth0.domain,
     clientID: config.auth0.clientID,
     responseType: 'token id_token',
@@ -95,13 +96,29 @@ window.addEventListener('load', async () => {
     displayStuffBasedOnLoginState()
   }
 
-
   loginBtn.addEventListener('click', function(e) {
     e.preventDefault()
     webAuth.authorize()
   })
 
   logoutBtn.addEventListener('click', logout)
+
+  document.getElementById('btn-backend')
+    .addEventListener('click', async () => {
+      const accessToken = localStorage.getItem('access_token')
+
+      const response = await fetch(
+        `${window.location.origin}/backend`,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
+        }
+      )
+
+      const payload = await response.json()
+      document.getElementById('backend-result').innerHTML = JSON.stringify(payload)
+    })
 
   handleAuthentication()
 })
